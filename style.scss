@@ -163,7 +163,7 @@ body {
 	color: $color_1;
 	overscroll-behavior-y: none;
 }
-.social-icons {
+
 	.social-icon {
 		text-decoration: none;
 		display: inline-flex;
@@ -182,12 +182,11 @@ body {
 		&:hover {
 			background-color: $background-color_2;
 		}
-		
 	}
-}
+
 
 .dev-icons {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 992px) {
