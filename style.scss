@@ -312,3 +312,13 @@ body {
 		max-width: 1320px;
 	}
 }
+
+.img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+
+  .rounded-circle {
+	border-radius: 50% !important;
+  }
