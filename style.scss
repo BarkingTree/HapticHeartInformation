@@ -1,0 +1,315 @@
+
+$color_1: #6c757d;
+$color_2: #fff;
+$background-color_1: #495057;
+$background-color_2: #bd5d38;
+$background-color_3: #9b98986b;
+$outline-color_1: #d48a6e;
+
+// Default colours override 
+$primary:  #ce8933;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// Create your own map of custom colours. This lets you access them using HTML Classes
+$custom-colors: (
+  
+);
+
+// Merge the default and custom maps together 
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+body {
+    font-family: sans-serif;
+}
+
+/* SideBar Setup */
+/* Offset Contents for SideBar */
+#sideNav {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				font-weight: 800;
+				letter-spacing: 0.05rem;
+
+			}
+		}
+	}
+	.navbar-toggler {
+		&:focus {
+			outline-color: $outline-color_1;
+		}
+	}
+}
+
+section.resume-section {
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	max-width: 90rem;
+    .resume-section-title {
+        font-weight: 700;
+    }
+	.resume-section-content {
+		width: 100%;
+	}
+}
+
+.project-details {
+    display: flex;
+	align-items: center; 
+	
+    .project-icon {
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 3.5rem;
+		width: 3.5rem;
+		background-color: $background-color_1;
+		color: $color_2;
+		border-radius: 100%;
+		font-size: 1.5rem;
+        margin-left: 1rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background-color: $background-color_2;
+		}
+		
+	}
+	.project-icon-placeholder {
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 3.5rem;
+		width: 3.5rem;
+		background-color: $background-color_3;
+		color: $color_2;
+		border-radius: 100%;
+		font-size: 1.5rem;
+        margin-left: 1rem;
+		opacity: 1;
+	}
+}
+
+.container {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-fluid {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-xl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-lg {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-md {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-sm {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+.d-flex {
+	display: flex !important;
+}
+.d-inline-flex {
+	display: inline-flex !important;
+}
+.d-none {
+	display: none !important;
+}
+body {
+	padding-top: 3.375rem;
+	color: $color_1;
+	overscroll-behavior-y: none;
+}
+.social-icons {
+	.social-icon {
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 3.5rem;
+		width: 3.5rem;
+		background-color: $background-color_1;
+		color: $color_2;
+		border-radius: 100%;
+		font-size: 1.5rem;
+		margin-right: 1.5rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background-color: $background-color_2;
+		}
+		
+	}
+}
+
+.dev-icons {
+    font-size: 3rem;
+}
+
+@media (min-width: 992px) {
+	#sideNav {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 12rem;
+		height: 100vh;
+		.navbar-brand {
+			display: flex;
+			margin: auto auto 0;
+			padding: 0.5rem;
+			.img-profile {
+				max-width: 10rem;
+				max-height: 10rem;
+				border: 0.5rem solid rgba(255, 255, 255, 0.2);
+			}
+		}
+		.navbar-collapse {
+			display: flex;
+			align-items: flex-start;
+			flex-grow: 0;
+			width: 100%;
+			margin-bottom: auto;
+			.navbar-nav {
+				flex-direction: column;
+				width: 100%;
+				.nav-item {
+					display: block;
+					.nav-link {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	body {
+		padding-top: 0;
+		padding-left: 12rem;
+	}
+	section.resume-section {
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+
+	.container-lg {
+		max-width: 960px;
+	}
+	.container-md {
+		max-width: 960px;
+	}
+	.container-sm {
+		max-width: 960px;
+	}
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 768px) {
+	section.resume-section {
+		min-height: 100vh;
+	}
+	.container-md {
+		max-width: 720px;
+	}
+	.container-sm {
+		max-width: 720px;
+	}
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 576px) {
+	.container-sm {
+		max-width: 540px;
+	}
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 1200px) {
+	.container-xl {
+		max-width: 1140px;
+	}
+	.container-lg {
+		max-width: 1140px;
+	}
+	.container-md {
+		max-width: 1140px;
+	}
+	.container-sm {
+		max-width: 1140px;
+	}
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1400px) {
+	.container-xxl {
+		max-width: 1320px;
+	}
+	.container-xl {
+		max-width: 1320px;
+	}
+	.container-lg {
+		max-width: 1320px;
+	}
+	.container-md {
+		max-width: 1320px;
+	}
+	.container-sm {
+		max-width: 1320px;
+	}
+	.container {
+		max-width: 1320px;
+	}
+}
